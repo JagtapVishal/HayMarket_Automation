@@ -16,14 +16,14 @@ public class Test_Run extends TestBuild {
 	
 
 	
-	@Test(priority=2)
-	public void Login_Testcase()
-	{
-		login_page lp =new login_page();
-	
-		lp.TC_001(driver);
-	}	
-	
+//	@Test(priority=2)
+//	public void Login_Testcase()
+//	{
+//		login_page lp =new login_page();
+//	
+//		lp.TC_001(driver);
+//	}	
+//	
 	@Test(priority=1)	
 	public void Register_Testcase() throws IOException
 	{
