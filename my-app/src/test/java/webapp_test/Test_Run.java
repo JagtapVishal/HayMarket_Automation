@@ -13,22 +13,14 @@ import webapp.register_page;
 public class Test_Run extends TestBuild {
 	
 
-	@BeforeMethod
-	public void Test() throws IOException
-	{
-		 		
-		setup();
-		
-	}	
 	
-	
-	@BeforeMethod
-	public void BrowserOpen() throws IOException
-	{
-		 		
-		setup();
-		
-	}	
+//	@BeforeMethod
+//	public void BrowserOpen() throws IOException
+//	{
+//		 		
+//		setup();
+//		
+//	}	
 	
 	@Test(priority=2)
 	public void Login_Testcase()
