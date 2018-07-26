@@ -98,7 +98,7 @@ public class api_services {
 	
 
 	
-	//@Test(priority=3)
+	@Test(priority=3)
 	public void reset_password_postMethod()throws Exception
 	{
 		
