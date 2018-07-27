@@ -23,10 +23,10 @@ public class login_page {
 	//By login_Tab = By.xpath("//*[@id='hrefDynamicLogin']");
 	By email_id = By.xpath("//*[@id='root_email']");	
 	By password = By.xpath("//*[@id='root_password']");
-	By Keep_in_sign = By.xpath("//*[@id='root_rememberMe']");
-	By login_button = By.xpath("//*[@id='HMIRegistration__Root']/div/form/button");
+	By Keep_in_sign = By.xpath("//*[@class='HMIRegistration__sprite-border']");
+	By login_button = By.xpath("//*[@class='HMIRegistration__submit']");
 	//By logout_button= By.xpath("//*[@id='hrefLogout']");
-	By error_msg=By.xpath("//*[@id='HMIRegistration__Root']/div/p[@class='error-message']");
+	By error_msg=By.xpath("//*[@class='HMIRegistration__error']");
 	
 	
 	public void TC_001(WebDriver driver)
