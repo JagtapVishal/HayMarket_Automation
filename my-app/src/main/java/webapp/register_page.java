@@ -13,19 +13,19 @@ public class register_page {
 
 	
 	// locator Login page
-		By register_link = By.xpath("//*[@id='HMIRegistration__Root']/div/p[1]/a");
+		By register_link = By.xpath("//*[@id='HMIRegistration']/div/footer/p[1]/a");
 		By fn = By.xpath("//*[@id='root_subscriber_firstName']");	
 		By ln = By.xpath("//*[@id='root_subscriber_lastName']");
 		By emailid = By.xpath("//*[@id='root_subscriber_email']");
 		By password= By.xpath("//*[@id='root_registerPassword_password']");
 		By compname = By.xpath("//*[@id='root_business_company']");
 		By JobTitle = By.xpath("//*[@id='root_business_jobTitle']");
-		By Country = By.xpath("//div[@class='form-group field field-string']/select");
-		By Select_newletter= By.xpath("//*[@id='HMIRegistration__Root']/div/form/div/fieldset/div[5]/div[1]/div[1]/div/input");
-		By register_button = By.xpath("//*[@id='HMIRegistration__Root']/div/form/button");
-		By signnow_button= By.xpath("//*[@id='HMIRegistration__Root']/div/p[1]/a");
-		By log_in=By.xpath("//*[@id='HMIRegistration__Root']/div/p[1]/a");
-		By error_msg=By.xpath("//*[@id='HMIRegistration__Root']/div/p[1]");
+		By Country = By.xpath("//*[@class='HMIRegistration__select']");
+		By Select_newletter= By.xpath("//*[text()[contains(.,'MM&M Breaking News')]]");
+		By register_button = By.xpath("//*[@class='HMIRegistration__submit']");
+		//By signnow_button= By.xpath("//*[@id='HMIRegistration__Root']/div/p[1]/a");
+		//By log_in=By.xpath("//*[@id='HMIRegistration__Root']/div/p[1]/a");
+		By error_msg=By.xpath("//*[@class='error-message']");
 		
 	public void TC_002(WebDriver driver){
 		
