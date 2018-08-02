@@ -8,11 +8,14 @@ package webapp;
 
 //import java.io.IOException;
 import java.util.concurrent.TimeUnit;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
 import utility.Constant;
 import utility.ReadExcel;
 
@@ -54,6 +57,10 @@ public class login_page {
 				email.clear();
 				email.sendKeys(UserName);
 				log.info("Email address typed");
+				
+				
+				
+
 				
 				//System.out.println("enter password");
 				WebElement pass= driver.findElement(password);
