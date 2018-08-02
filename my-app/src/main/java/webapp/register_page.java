@@ -25,7 +25,7 @@ public class register_page {
 		By register_button = By.xpath("//*[@class='HMIRegistration__submit']");
 		//By signnow_button= By.xpath("//*[@id='HMIRegistration__Root']/div/p[1]/a");
 		//By log_in=By.xpath("//*[@id='HMIRegistration__Root']/div/p[1]/a");
-		By error_msg=By.xpath("//*[@class='error-message']");
+		By error_msg=By.xpath("//*[@class='HMIRegistration__error']");
 		
 	public void TC_002(WebDriver driver){
 		
