@@ -139,7 +139,7 @@ public class api_services {
 		user.put("publicationId", 4);
 		user.put("url", "");
 		user.put("password", "Test1234");
-		user.put("newPassword", "Test123");
+		user.put("newPassword", "Test1234");
 		
 		String jsonData=user.toString();
 		System.out.println("data"+jsonData);
