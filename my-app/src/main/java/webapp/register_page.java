@@ -1,18 +1,21 @@
 package webapp;
 
 import java.util.concurrent.TimeUnit;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
 import utility.Constant;
 import utility.ReadExcel;
 
 public class register_page {
 
 	
-	// locator Login page
+	private static final String UnitedStates = null;
+		// locator Login page
 		By register_link = By.xpath("//*[@id='HMIRegistration']/div/footer/p[1]/a");
 		By fn = By.xpath("//*[@id='root_subscriber_firstName']");	
 		By ln = By.xpath("//*[@id='root_subscriber_lastName']");
@@ -21,10 +24,11 @@ public class register_page {
 		By compname = By.xpath("//*[@id='root_business_company']");
 		By JobTitle = By.xpath("//*[@id='root_business_jobTitle']");
 		By Country = By.xpath("//*[@class='HMIRegistration__select']");
-		By Select_newletter= By.xpath("//*[text()[contains(.,'MM&M Breaking News')]]");
+		By Select_newletter= By.xpath("//*[@id='HMIRegistration']/div/div/form/div[6]/div/div[1]/div/span[1]/span[1]");
+		By relevant_info= By.xpath("//*[@id='HMIRegistration']/div/div/form/div[7]/div/div/span[1]/span[1]");
 		By register_button = By.xpath("//*[@class='HMIRegistration__submit']");
-		//By signnow_button= By.xpath("//*[@id='HMIRegistration__Root']/div/p[1]/a");
-		//By log_in=By.xpath("//*[@id='HMIRegistration__Root']/div/p[1]/a");
+		
+		By log_in=By.xpath("//*[@id='HMIRegistration']/div/div/p/a");
 		By error_msg=By.xpath("//*[@class='HMIRegistration__error']");
 		
 	public void TC_002(WebDriver driver){
@@ -102,6 +106,7 @@ public class register_page {
 		 
 		 Country_name.sendKeys(country_name);
 		 log.info("Country name is seleced");
+		 System.out.println(country_name);
 		 
 		 Thread.sleep(2000);
 		 //Select Newletter
@@ -110,13 +115,28 @@ public class register_page {
 		 se_new_letter.click();
 		 log.info("Newsletter is selected");
 		 
-		 
+		
+		String name="United States";
+		
+		System.out.println(name);
+		
+		if(!country_name.equals(name)  )
+		{	
+			 System.out.println("in if");	
+			 Thread.sleep(2000);
+			 //Select Relevant_info click
+			 WebElement Re_info_click = driver.findElement(relevant_info);
+			
+			 Re_info_click.click();
+			 log.info("Relevant_info click is selected");
+		}
+		
 		//Click on Register button
 		 WebElement register_btn = driver.findElement(register_button);
 		 register_btn.click();
 		 log.info("Register button is clicked");
-		 
-		 Thread.sleep(8000);
+		
+		 Thread.sleep(2000);
 		 
 		 try{	
 				String errormessage = driver.findElement(error_msg).getText();
@@ -138,6 +158,10 @@ public class register_page {
 				reader.setCellData("Register", "Status", rowNum, "Pass");
 				log.info("Write in excelsheet Pass status");
 				
+				//Click on register link 
+				 WebElement login = driver.findElement(log_in);
+				 login.click();
+				 log.info("Click on login link");
 			}
 			
 			
