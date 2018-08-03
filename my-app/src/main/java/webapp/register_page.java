@@ -158,10 +158,15 @@ public class register_page {
 				reader.setCellData("Register", "Status", rowNum, "Pass");
 				log.info("Write in excelsheet Pass status");
 				
-				//Click on register link 
+				//Click on login link 
 				 WebElement login = driver.findElement(log_in);
 				 login.click();
 				 log.info("Click on login link");
+				 
+				 //Click on register link 
+				 WebElement register1 = driver.findElement(register_link);
+				 register1.click();
+				 log.info("Click on register link");
 			}
 			
 			
